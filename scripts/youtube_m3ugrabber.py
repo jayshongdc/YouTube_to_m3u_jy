@@ -81,7 +81,11 @@ print('#EXTM3U x-tvg-url="https://github.com/botallen/epg/releases/download/late
 print(banner)
 #s = requests.Session()
 with open('../youtube_channel_info.txt') as f:
-    response = requests.get('https://www.dailymotion.com/player/metadata/video/kdFzSYy1bHxrForBrar?embedder=https://www.xtra.com.my/&syndication=273888&locale=en-US&dmV1st=F19B85209E31B3126D65874B3CF4A09B&dmTs=502702&is_native_app=0', timeout=15).text
+    req_header={
+        'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhaWQiOiJmMWEzNjJkMjg4YzFiOTgwOTljNyIsInJvbCI6ImNhbi1tYW5hZ2UtcGFydG5lcnMtcmVwb3J0cyBjYW4tcmVhZC12aWRlby1zdHJlYW1zIGNhbi1zcG9vZi1jb3VudHJ5IGNhbi1hZG9wdC11c2VycyBjYW4tcmVhZC1jbGFpbS1ydWxlcyBjYW4tbWFuYWdlLWNsYWltLXJ1bGVzIGNhbi1tYW5hZ2UtdXNlci1hbmFseXRpY3MgY2FuLXJlYWQtbXktdmlkZW8tc3RyZWFtcyBjYW4tZG93bmxvYWQtbXktdmlkZW9zIGFjdC1hcyBhbGxzY29wZXMgYWNjb3VudC1jcmVhdG9yIGNhbi1yZWFkLWFwcGxpY2F0aW9ucyIsInNjbyI6Im1hbmFnZV9zdWJzY3JpcHRpb25zIG1hbmFnZV92aWRlb3MgdXNlcmluZm8iLCJsdG8iOiJabnA0Y3lVSmRIdDlieGNJRGd3T0IzYzVMUTRpSVNGaUZBSlJCQSIsImFpbiI6MSwiYWRnIjoxLCJpYXQiOjE2NjgzOTkwMjgsImV4cCI6MTY2ODQzNDgyMCwiZG12IjoiMSIsImF0cCI6ImJyb3dzZXIiLCJhZGEiOiJ3d3cuZGFpbHltb3Rpb24uY29tIiwidmlkIjoiRjE5Qjg1MjA5RTMxQjMxMjZENjU4NzRCM0NGNEEwOUIiLCJmdHMiOjUwMjcwMiwiY2FkIjoyLCJjeHAiOjIsImNhdSI6Miwia2lkIjoiQUY4NDlERDczQTU4NjNDRDdEOTdEMEJBQjA3MjI0M0IifQ.HCyvVufQKRb5pLUiowbmZ5tALPMocF3PMm6xVlQJAqs',
+    }
+    
+    response = requests.get('https://www.dailymotion.com/player/metadata/video/kdFzSYy1bHxrForBrar?embedder=https://www.xtra.com.my/&syndication=273888&locale=en-US&dmV1st=F19B85209E31B3126D65874B3CF4A09B&dmTs=502702&is_native_app=0', headers=req_header).text
     data = json.loads(response)
 
     # print (data['qualities']['auto'][0]['url'])
