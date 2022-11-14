@@ -88,7 +88,7 @@ with open('../youtube_channel_info.txt') as f:
     response = requests.get('https://www.dailymotion.com/player/metadata/video/kdFzSYy1bHxrForBrar?embedder=https://www.xtra.com.my/&syndication=273888&locale=en-US&dmV1st=F19B85209E31B3126D65874B3CF4A09B&dmTs=502702&is_native_app=0', headers=req_header).text
     data = json.loads(response)
 
-    # print (data['qualities']['auto'][0]['url'])
+    print (data)
 
     pl_link = data['qualities']['auto'][0]['url']
     playlist = requests.get(pl_link, timeout=15).text
