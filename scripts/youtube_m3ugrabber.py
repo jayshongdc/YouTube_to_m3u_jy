@@ -35,6 +35,9 @@ https://d25tgymtnqzu8s.cloudfront.net/smil:berita/chunklist_b4596000_slENG.m3u8
 
 #EXTINF:-1 group-title="myFreeview: TV" ch-number="128" tvg-id="128" tvg-chno="128" tvg-logo="https://www.channelnewsasia.com/sites/default/themes/mc_cna_theme/images/logo.png",CNA
 https://mediacorp-videosbclive.akamaized.net/dd724cfb0e8e4cdc921bbc4ac94614bf/ap-southeast-1/6057994443001/profile_2/chunklist.m3u8
+
+#EXTINF:-1 group-title="myFreeview: TV" ch-number="129" tvg-id="129" tvg-chno="129" tvg-logo="https://p2.img.cctvpic.com/photoAlbum/page/performance/img/2018/7/3/1530586745032_233.png",CCTV 4
+https://cctvwbcdtxyhw.liveplay.myqcloud.com/cctvwbcd/cdrmjzcctv4_1/index.m3u8?b=200-2100
 '''
 
 import requests
